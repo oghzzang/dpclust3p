@@ -11,8 +11,8 @@
 #' @param min_maq The minimum mapping quality required for a read to be counted
 #' @author sd11
 #' @export
-alleleCount = function(locifile, bam, outfile, min_baq=20, min_maq=35) {
-  cmd = paste(ALLELECOUNTER,
+alleleCount = function(locifile, bam, outfile, min_baq=20, min_maq=35, ALLELECOUNTER_exe) {
+  cmd = paste(ALLELECOUNTER_exe,
               "-b", bam,
               "-o", outfile,
               "-l", locifile,
